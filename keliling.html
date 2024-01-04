@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matematik</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO KATIK</h1>
+    </header>
+
+    <p id="subhead1">Selamat Datang di Kalkulator Matematik!</p>
+    <p id="subhead2">Web ini dirancang untuk membantu kalian dalam menghitung Luas dan Keliling dari Segitiga</p>
+    
+    <nav id="navigation1">
+        <a href="index.html"><b>Luas Segitiga</b></a>
+    </br>
+    </nav>
+    <nav id="navigation2">
+        <a href="keliling.html"><b>Keliling Segitiga</b></a>
+    </nav>
+</br>
+    
+    <img src="https://1.bp.blogspot.com/-KQJroZ0sV7k/X_FMkEdGraI/AAAAAAAACo8/WeODlSCxu0kzsGZfFvppty4A4ErhqpqqQCLcBGAsYHQ/s2048/rumus%2Bsegitiga%2Bsama%2Bsisi.png"
+    style="display:block; margin: auto;" alt="Ini gambar Segitiga" widht="400" height="400"/>
+</br>
+    <h2>Hitung Keliling Segitiga</h2>
+</br>
+    <label for="">Sisi Segitiga</label></br>
+    <input type="number" id="s1" placeholder="Ketik s1"></br>
+    <label for="">Sisi segitiga</label></br>
+    <input type="number" id="s2" placeholder="Ketik s2"></br>
+    <label for="">Sisi Segitiga</label></br>
+    <input type="number" id="s3" placeholder="Ketik s3"></br>
+    <button id="hitung" >Hitung</button>
+    <button id="reset" onclick="reset ()">Reset</button>
+    <div id="output"></div>
+
+    <script>
+        var s1 = document.getElementById('s1')
+            var s2 = document.getElementById('s2')
+            var s3 = document.getElementById('s3')
+            var hitung = document.getElementById('hitung')
+            var output = document.getElementById('output')
+            hitung.addEventListener('click', function (){
+            let sisi1 = s1.value 
+            let sisi2 = s2.value 
+            let sisi3 = s3.value
+            let k = parseInt (sisi1) + parseInt (sisi2) + parseInt (sisi3)
+        output.innerHTML = `Hasil Keliling segitiga
+        adalah ${k} cm`
+        })
+
+        function reset(){
+            s1.value =null;
+            s2.value =null;
+            s3.value =null;
+        }
+    </script>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
